@@ -14,5 +14,5 @@ Discord.py requires at least [Python 3.8](https://www.python.org/downloads/).
 ## Usage
 Simply populate `secrets.txt` with values as you see fit, then launch the main python script:
 ```
-python discordBot.py
+python WaitingBot.py
 ```
