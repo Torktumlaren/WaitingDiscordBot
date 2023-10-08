@@ -90,8 +90,6 @@ with open("dictionary.txt") as f:
 regex = re.compile("[^a-zA-Z0-9\s]") # pyright: ignore
 
 if __name__ == "__main__":
-    print(dictionary)
-
     
     delimiter = " = "
     tokenString = "token" + delimiter
