@@ -18,7 +18,7 @@ def findTimeTerm(message):
     for term, termUnit in dictionary.items():
         if (index := listFind(message, term)) >= 0:
             # "a minute" should be treated as "1 minute"
-            if (messageUnits := message[index-1]) == "a":
+            if (messageUnits := message[index-1]) in ["a", "an"]:
                 messageUnits = "1"
                 # Make sure that what is in front of the term is a number
                 if messageUnits.isnumeric():
