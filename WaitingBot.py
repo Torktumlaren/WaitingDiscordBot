@@ -17,9 +17,12 @@ def findTimeTerm(message):
 
     for term, termUnit in dictionary.items():
         if (index := listFind(message, term)) >= 0:
-            # Make sure that what is in front of the term is a number
-            if (messageUnits := message[index-1]).isnumeric():
-                return [messageUnits, term]
+            # "a minute" should be treated as "1 minute"
+            if (messageUnits := message[index-1]) == "a":
+                messageUnits = "1"
+                # Make sure that what is in front of the term is a number
+                if messageUnits.isnumeric():
+                    return [messageUnits, term]
     return None
 
 def generateText(stringList):
